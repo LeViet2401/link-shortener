@@ -2,7 +2,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
 @Schema({ timestamps: true })
-export class Link extends Document {
+export class Url extends Document {
   @Prop({ required: true, unique: true })
   shortCode: string;
 
@@ -13,4 +13,4 @@ export class Link extends Document {
   clicks: number;
 }
 
-export const LinkSchema = SchemaFactory.createForClass(Link);
+export const UrlSchema = SchemaFactory.createForClass(Url);
